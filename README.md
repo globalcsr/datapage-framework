@@ -1,17 +1,7 @@
 # datapage-framework
-### Plugins to and jquery manipulations of datapages
 
+## Styles and jquery manipulations of datapages.
 
-##Structure of this repository:
+### Please refer to the readme-files of each folder and subfolder for specific instructions on how to use the dependencies included in this repository. 
 
-> Depoendencies
->> jqeuery
->> jquery ui
->> bootstrap
->> materialize
->> online-help
->> page-loader
-> Submission forms
->> assessment-form
->>> grid-structure.js
-
+### Please reserve this repository for dataåage specific manipulations and styles. Plugins and other frameworks should have their sepearate repositories.
