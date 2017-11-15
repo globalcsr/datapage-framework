@@ -1,0 +1,211 @@
+// Reference this style to instanciate the small animated logo version (100px wide)
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+
+.mask{
+    -webkit-mask-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1455399/csrCloud_logo-200x200-bw.png');
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-size: 100px;
+}
+
+.background-movement {
+  width:100px;
+    height:100px;
+   background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1455399/black-shiny-tile.png');
+  background-size:300% 300%;
+  animation: colorchange 15s ease infinite;
+}
+
+  
+  
+
+@-webkit-keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+.shadow {
+  position:absolute;
+  width:100px;
+  height:auto;
+    -webkit-filter: drop-shadow(8px 8px 5px rgba(60,60,60,0.8));
+  filter: drop-shadow(8px 8px 5px rgba(60,60,60,0.8));
+}
+
+
+@-webkit-keyframes colorchange {
+    0%{background-position:25% 15%}
+    25%{background-position:65% 85%}
+  50%{background-position:35% 25%}
+    100%{background-position:25% 15%}
+}
+@-moz-keyframes colorchange {
+    0%{background-position:25% 15%}
+    25%{background-position:65% 85%}
+  50%{background-position:35% 25%}
+    100%{background-position:25% 15%}
+}
+@keyframes colorchange { 
+    0%{background-position:25% 15%}
+    25%{background-position:65% 85%}
+  50%{background-position:35% 25%}
+    100%{background-position:25% 15%}
+}
+
+
+
+.rainbow-container {
+  z-index: -10;
+  transform: rotate(0deg) translateZ(0);
+  transform-origin: center center;
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  -webkit-animation: rainbow 20s infinite linear;
+  transform-style: preserve-3d;
+  perspective: 450px;
+    filter: blur(15px) brightness(1.2) sepia(0.2) contrast(1.5);  
+}
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+    box-shadow: 0 0 0.3em 0.05em #2c116e, inset 0.03em 0 0.1em 0.02em #de66e4;
+  }
+  25% {
+    transform: rotate(90deg) translateZ(0);
+    box-shadow: 0 0 0.3em 0.05em #28126a, inset 0.03em 0 0.1em 0.02em #34ceaa;
+  }
+  50% {
+    transform: rotate(180deg) translateZ(0);
+    box-shadow: 0 0 0.3em 0.05em #28126a, inset 0.03em 0 0.1em 0.02em #19b3f5;
+  }
+  75% {
+    transform: rotate(270deg) translateZ(0);
+    box-shadow: 0 0 0.3em 0.05em #28126a, inset 0.03em 0 0.1em 0.02em #3d52ac;
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+    box-shadow: 0 0 0.3em 0.05em #28126a, inset 0.03em 0 0.1em 0.02em #de66e4;
+  }
+}
+.rainbow-container {
+  position: relative;
+}
+.rainbow-container > div {
+  position:absolute;
+  width: 220%;
+  height: 220%;
+}
+
+.green {
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(115, 213, 186, 0.8) 100%);
+  transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 0);
+  animation: curve-rotate-green 10s infinite linear;
+}
+
+.pink {
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(215, 115, 229, 0.8) 100%);
+  transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 0);
+  animation: curve-rotate-pink 14s infinite linear;
+}
+
+@-webkit-keyframes curve-rotate-green {
+  0% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@-moz-keyframes curve-rotate-green {
+  0% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@-o-keyframes curve-rotate-green {
+  0% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@keyframes curve-rotate-green {
+  0% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(0) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@-webkit-keyframes curve-rotate-pink {
+  0% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@-moz-keyframes curve-rotate-pink {
+  0% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@-o-keyframes curve-rotate-pink {
+  0% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+}
+@keyframes curve-rotate-pink {
+  0% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 0deg);
+  }
+  50% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 180deg);
+  }
+  100% {
+    transform: rotateY(180deg) skew(14deg) rotate3d(1.1, 1, 0.9, 360deg);
+  }
+
+
+
