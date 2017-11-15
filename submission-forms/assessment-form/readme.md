@@ -7,7 +7,8 @@
 
 
 # body scripts
-
+Top: 
+<script src="https://cdn.rawgit.com/globalcsr/datapage-framework/master/submission-forms/assessment-form/dependencies/grid-structure.js"></script>
 
 
 # footer scripts
